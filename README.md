@@ -8,10 +8,10 @@ XML files could have many elements in many levels, and each, could have attribut
 ```
   {
     "XML": "test.xml", //**Required**
-    "Export": "all", //**Required**: other options: unique, equal
-    "EqualTo": [], //**Optional** unless Export is equal, then you must specify the result fields with values as an array of strings
+    "Export": "unique" //**Required**: other options: unique, equal 
+    "EqualTo": [], //**Optional** unless Export above is equal instead of unique, then you must specify expected result values as an array of strings
     "Output": "console", //**Required**: current output is only console, but excel output is coming 
-    "Config": { //**Required**: Config is based on the same repeating structure to match the xml tree levels
+    "Config": { //**Required**: This section is based on the same repeating structure to match the xml tree levels
         "Tag": "FirstLevel", //**Required** Tag is the name of the xml element on this level
         "Filter": [{  //**Optional**: filters are an array of xml attributes of the current element
             "Name": "active",
@@ -28,4 +28,11 @@ XML files could have many elements in many levels, and each, could have attribut
         }
     }
 }
+```
+>  dotnet run config_SecondLevelComparison.json
+
+```
+Tag:FirstLevel Filters:[active:true]  SubNode: SecondLevel-> Tag:SecondLevel Compares:[Name:SonA]
+Tag:FirstLevel Filters:[active:true]  SubNode: SecondLevel-> Tag:SecondLevel Compares:[Name:SonC]
+Total records: 2
 ```

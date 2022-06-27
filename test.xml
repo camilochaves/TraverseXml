@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<main>
+    <FirstLevel active="true">
+        <Name>FatherA</Name>
+        <SecondLevel>
+            <Name>SonA</Name>
+        </SecondLevel>
+        <SecondLevel>
+            <Name>SonA</Name>
+        </SecondLevel>
+        <SecondLevel>
+            <Name>SonB</Name>
+        </SecondLevel>
+    </FirstLevel>
+    <FirstLevel active="true">
+        <Name>FatherA</Name>
+        <SecondLevel>
+            <Name>SonA</Name>
+        </SecondLevel>
+        <SecondLevel>
+            <Name>SonA</Name>
+        </SecondLevel>
+        <SecondLevel>
+            <Name>SonB</Name>
+        </SecondLevel>
+    </FirstLevel>
+    <FirstLevel active="true">
+        <Name>FatherB</Name>
+        <SecondLevel>
+            <Name>SonC</Name>
+        </SecondLevel>
+        <SecondLevel>
+            <Name>SonC</Name>
+        </SecondLevel>
+        <SecondLevel>
+            <Name>SonD</Name>
+        </SecondLevel>
+    </FirstLevel>
+    <FirstLevel active="false">
+        <Name>FatherB</Name>
+        <SecondLevel>
+            <Name>SonC</Name>
+        </SecondLevel>
+        <SecondLevel>
+            <Name>SonC</Name>
+        </SecondLevel>
+        <SecondLevel>
+            <Name>SonD</Name>
+        </SecondLevel>
+    </FirstLevel>
+</main>

@@ -1,0 +1,16 @@
+{
+    "XML": "test.xml",
+    "Export": "all",
+    "EqualTo": ["FatherC"],
+    "Output": "console",
+    "Config": {
+        "Tag": "FirstLevel",
+        "Filter": [{
+            "Name": "active",
+            "Value": "true"
+        }],
+        "Report": [],
+        "Compare": ["Name"],
+        "Node": {}
+    }
+}

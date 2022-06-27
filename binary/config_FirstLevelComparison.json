@@ -1,7 +1,7 @@
 {
     "XML": "test.xml",
-    "Export": "all",
-    "EqualTo": ["FatherC"],
+    "Export": "unique",
+    "EqualTo": [],
     "Output": "console",
     "Config": {
         "Tag": "FirstLevel",

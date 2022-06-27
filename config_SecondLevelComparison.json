@@ -1,7 +1,7 @@
 {
     "XML": "test.xml",
-    "Export": "all",
-    "EqualTo": ["FatherC"],
+    "Export": "unique",
+    "EqualTo": [],
     "Output": "console",
     "Config": {
         "Tag": "FirstLevel",
@@ -10,7 +10,12 @@
             "Value": "true"
         }],
         "Report": [],
-        "Compare": ["Name"],
-        "Node": {}
+        "Compare": [],
+        "Node": {
+            "Tag": "SecondLevel",
+            "Filter": [],
+            "Report": [],
+            "Compare": ["Name"]
+        }
     }
 }

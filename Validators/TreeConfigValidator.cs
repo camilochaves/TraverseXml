@@ -1,6 +1,7 @@
 using FluentValidation;
+using TraverseXml.Models;
 
-namespace Validators;
+namespace TraverseXml.Validators;
 
 public class TreeConfigValidator: AbstractValidator<TreeConfig>
 {

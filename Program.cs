@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
-using Validators;
+using TraverseXml;
+using TraverseXml.Validators;
 
 try
 {
@@ -9,7 +10,7 @@ try
     using StreamReader streamReader = new StreamReader(config);
     string json = streamReader.ReadToEnd();
     var configScript = JsonConvert.DeserializeObject<TreeConfig>(json);
-    if (configScript is null) throw new Exception(message: "Error: CompareScript cannot be null! Deserialize Error on CompareScript json file");
+    if (configScript is null) throw new Exception(message: "Error: TreeStructure cannot be null! Deserialize Error on TreeStructure json file");
 
     var validator = new TreeConfigValidator();
     validator.ValidateAndThrow(configScript);

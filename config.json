@@ -1,0 +1,15 @@
+{
+    "XML": "test.xml",
+    "Export": "unique",
+    "EqualTo": [],
+    "Output": "console",
+    "Config": {
+        "Tag": "FirstLevel",
+        "Filter": [{
+            "Name": "active",
+            "Value": "true"
+        }],
+        "Report": [],
+        "Compare": ["Name"]
+    }
+}

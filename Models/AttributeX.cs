@@ -1,4 +1,4 @@
-namespace Model;
+namespace TraverseXml.Models;
 
 public class AttributeX
 {

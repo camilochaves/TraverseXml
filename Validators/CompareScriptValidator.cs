@@ -1,8 +1,9 @@
 using FluentValidation;
+using TraverseXml.Models;
 
-namespace Validators;
+namespace TraverseXml.Validators;
 
-public class CompareScriptValidator: AbstractValidator<CompareScript>
+public class CompareScriptValidator: AbstractValidator<TreeStructure>
 {
     public CompareScriptValidator()
     {

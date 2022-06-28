@@ -1,4 +1,4 @@
-namespace Model;
+namespace TraverseXml.Models;
 
 public class TreeConfig
 {
@@ -10,6 +10,6 @@ public class TreeConfig
 
     //valid values: console, excel
     public string Output {get; set;}
-    public CompareScript Config {get; set;}
+    public TreeStructure Config {get; set;}
 
 }

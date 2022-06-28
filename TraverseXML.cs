@@ -1,11 +1,11 @@
 namespace TraverseXml;
 
-public static class TraverseXML
+public class TraverseXML
 {
-    private static TreeStructureReport tree = new();
-    private static List<TreeStructureReport> results = new();
+    private TreeStructureReport tree = new();
+    private List<TreeStructureReport> results = new();
 
-    public static void Run(IEnumerable<XElement>? elements, TreeStructure? configNode, TreeStructureReport? branch = null)
+    public void Run(IEnumerable<XElement>? elements, TreeStructure? configNode, TreeStructureReport? branch = null)
     {
         foreach (var element in elements)
         {
@@ -50,10 +50,10 @@ public static class TraverseXML
         }
     }
 
-    private static bool ElementNameMatchTag(XElement element, TreeStructure? configNode) =>
+    private bool ElementNameMatchTag(XElement element, TreeStructure? configNode) =>
         (element.Name.ToString() == configNode?.Tag);
 
-    private static bool ProcessFilters(XElement element, TreeStructure? configNode, TreeStructureReport branch)
+    private bool ProcessFilters(XElement element, TreeStructure? configNode, TreeStructureReport branch)
     {
         //Are there any filters to consider ?
         if (configNode.Filter?.Count() > 0 && element.HasAttributes)
@@ -76,7 +76,7 @@ public static class TraverseXML
         return true;
     }
 
-    private static void ProcessReports(XElement element, TreeStructure? configNode, TreeStructureReport branch)
+    private void ProcessReports(XElement element, TreeStructure? configNode, TreeStructureReport branch)
     {
         //Do you have any Fields to be included in the report ?
         if (configNode.Report?.Count() > 0 && element.HasElements)
@@ -97,7 +97,7 @@ public static class TraverseXML
             }
         }
     }
-    private static void ProcessCompares(XElement element, TreeStructure? configNode, TreeStructureReport branch)
+    private void ProcessCompares(XElement element, TreeStructure? configNode, TreeStructureReport branch)
     {
         //Do you have any Fields to compare ?
         if (configNode.Compare?.Count() > 0 && element.HasElements)
@@ -119,7 +119,7 @@ public static class TraverseXML
         }
     }
 
-    public static List<string> Report(
+    public List<string> Report(
      string export = "unique",
      string output = "console",
      List<string>? seed = null)

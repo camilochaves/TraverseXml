@@ -18,8 +18,9 @@ try
     XElement? root = XElement.Load(configScript!.XML!);
     if (!root.HasElements) throw new Exception("XML has no Elements!");
 
-    TraverseXML.Run(root.Elements(), configScript.Config);
-    var report = TraverseXML.Report(
+    var topLevelIterator = new TraverseXML();
+    topLevelIterator.Run(root.Elements(), configScript.Config);
+    var report = topLevelIterator.Report(
         configScript.Export,
         configScript.Output,
         configScript.EqualTo);

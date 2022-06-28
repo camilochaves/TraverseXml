@@ -10,7 +10,6 @@
             "Value": "true"
         }],
         "Report": [],
-        "Compare": ["Name"],
-        "Node": {}
+        "Compare": ["Name"]
     }
 }

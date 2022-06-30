@@ -1,0 +1,23 @@
+{
+    "XML": "product-db_AU.xml",
+    "Export": "unique",
+    "EqualTo": [],
+    "Output": "console",
+    "Config": {
+        "Tag": "Product",
+        "Filter": [{
+            "Name": "productClass",
+            "Value": "PRODUCT"
+        }],
+        "Report": ["ProductCode"],
+        "Compare": [],
+        "Node": {
+            "Tag": "Choices",
+            "Node": {
+                "Tag": "Component",
+                "Report": ["ProductCode"],
+                "Compare": ["CostInclusive", "DefaultQuantity"]
+            }
+        }
+    }
+}

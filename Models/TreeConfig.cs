@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace TraverseXml.Models;
 
 public class TreeConfig

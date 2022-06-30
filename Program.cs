@@ -1,8 +1,4 @@
-﻿using FluentValidation;
-using TraverseXml;
-using TraverseXml.Validators;
-
-try
+﻿try
 {
     var config = "config.json";
     if (args.Count() > 0) config = args[0];

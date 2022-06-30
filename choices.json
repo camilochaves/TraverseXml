@@ -1,22 +1,22 @@
 {
-    "XML": "product-db_AU.xml",
-    "Export": "unique",
-    "EqualTo": [],
+    "XML": "product-db.xml",
+    "Export": "equal",
+    "EqualTo": ["10000139", "10000415"],
     "Output": "console",
     "Config": {
         "Tag": "Product",
         "Filter": [{
             "Name": "productClass",
-            "Value": "PRODUCT"
+            "Value": "CHOICE"
         }],
-        "Report": ["ProductCode"],
-        "Compare": [],
+        "Report": [],
+        "Compare": ["ProductCode"],
         "Node": {
             "Tag": "Choices",
             "Node": {
                 "Tag": "Component",
-                "Report": ["ProductCode"],
-                "Compare": ["CostInclusive", "DefaultQuantity"]
+                "Report": [],
+                "Compare": ["ProductCode", "CostInclusive", "DefaultQuantity"]
             }
         }
     }

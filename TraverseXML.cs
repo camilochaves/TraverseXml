@@ -136,7 +136,7 @@ public class TraverseXML
         foreach (var result in results)
         {
             var compareList = result.CompareList().ToList();
-            if (tempCompareList.Count == 0)
+            if (export == "all")
             {
                 tempCompareList.Add(compareList);
                 report.Add(result.ToString());
@@ -154,10 +154,14 @@ public class TraverseXML
                 }
                 else if (export == "equal")
                 {
-                    var isContained = tempCompareList.Any(x => x.SequenceEqual(compareList));
+                    var isContained = true;
+                    var i=0;
+                    foreach(var item in seed!){
+                        isContained = isContained && (item == compareList[i]);
+                        i++;
+                    }
                     if (isContained)
                     {
-                        tempCompareList.Add(compareList);
                         report.Add(result.ToString());
                     }
                 }
